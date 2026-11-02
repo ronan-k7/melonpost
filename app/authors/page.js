@@ -4,17 +4,22 @@ import { ArrowRight, MapPin } from "lucide-react";
 import { authors } from "@/lib/content";
 import { PageHeader, ResourceNav } from "@/components/InfoPage";
 import { site, pageSocialMetadata } from "@/lib/site";
+import JsonLd from "@/components/JsonLd";
+import { breadcrumbJsonLd, webPageJsonLd } from "@/lib/seo";
+
+const DESCRIPTION = `Meet the editors, correspondents and writers behind ${site.name}\u2019s independent reporting on world affairs, politics, business, technology and health.`;
 
 export const metadata = {
   title: "Authors",
-  description: `Meet the editors and writers behind ${site.name}.`,
-    ...pageSocialMetadata("Authors", `Meet the editors and writers behind ${site.name}.`, "/authors"),
-  alternates: { canonical: `${site.url}/authors` },
+  description: DESCRIPTION,
+    ...pageSocialMetadata("Authors", DESCRIPTION, "/authors"),
 };
 
 export default function AuthorsPage() {
   return (
     <div>
+      <JsonLd data={webPageJsonLd({ type: "CollectionPage", name: "Authors", description: DESCRIPTION, path: "/authors" })} />
+      <JsonLd data={breadcrumbJsonLd([{ name: "Home", path: "/" }, { name: "Authors", path: "/authors" }])} />
       <PageHeader
         eyebrow="The newsroom"
         title="Authors"

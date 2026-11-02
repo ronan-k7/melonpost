@@ -4,12 +4,13 @@ import { ArrowRight, CheckCircle2, FileCheck2, Scale, SearchCheck } from "lucide
 import { authors } from "@/lib/content";
 import { categoryHref } from "@/lib/content";
 import { navigation, site, pageSocialMetadata } from "@/lib/site";
+import JsonLd from "@/components/JsonLd";
+import { breadcrumbJsonLd, webPageJsonLd } from "@/lib/seo";
 
 export const metadata = {
   title: "About us",
   description: `About ${site.name}: who we are, what we cover and the editorial standards behind our reporting.`,
     ...pageSocialMetadata("About us", `About ${site.name}: who we are, what we cover and the editorial standards behind our reporting.`, "/about"),
-  alternates: { canonical: `${site.url}/about` },
 };
 
 const wrap =
@@ -45,6 +46,8 @@ const principles = [
 export default function AboutPage() {
   return (
     <div>
+      <JsonLd data={webPageJsonLd({ type: "AboutPage", name: "About us", description: `About ${site.name}: who we are, what we cover and the editorial standards behind our reporting.`, path: "/about" })} />
+      <JsonLd data={breadcrumbJsonLd([{ name: "Home", path: "/" }, { name: "About us", path: "/about" }])} />
       <section className={`${wrap} grid grid-cols-[1.15fr_.85fr] gap-[70px] border-b border-line py-[80px] max-[980px]:grid-cols-1 max-[980px]:gap-12 max-[980px]:py-[50px] max-[700px]:py-[35px]`}>
         <div className="flex flex-col items-start justify-center">
           <span className="inline-flex items-center gap-1 font-sans text-[10px] font-bold uppercase leading-[1.2] tracking-[.09em] text-red">About {site.name}</span>

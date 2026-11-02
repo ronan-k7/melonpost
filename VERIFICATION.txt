@@ -12,3 +12,4 @@ Article social metadata continues to use the story image.
 Production build passed with 70 pages generated using next build --webpack.
 Homepage and author profile visually checked at desktop and 390px mobile widths. No horizontal overflow or browser errors observed.
 All six old photo assets replaced by matching name-based initials SVG files.
+Share cards: home, section, author and information pages use public/images/og/melonpost-global-news-og.jpg (generated from the brand PNG); every article uses its own generated card in public/images/og/articles/. Verified with npm run seo:check: 62 pages, 0 errors, 0 warnings.

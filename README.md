@@ -34,6 +34,24 @@ A production-ready Next.js editorial news site inspired by the supplied newspape
 
 About, Authors, Contact, Editorial Policy, Corrections Policy (includes right of reply), Source Methodology, Finance Coverage Standards, Advertising Policy, Privacy Policy and Legal. The wording of the policy pages lives in `lib/pages.js`; the footer "Resources" list, sitemap and `llms.txt` read from the same file. Have the policy and legal pages reviewed against how the site actually operates (analytics, ad networks, newsletter provider) before launch.
 
+## SEO, share cards and Google News
+
+| What | Where |
+| --- | --- |
+| Share card (Open Graph + X) for **home, sections, authors, info pages** | `public/images/og/melonpost-global-news-og.jpg`, made from `public/images/brand/melonpost-global-news-og.png` |
+| Share card for **each article** | `public/images/og/articles/<slug>.jpg`, made from that story's own featured image |
+| Card generator (runs before every `npm run build`) | `scripts/generate-og-images.mjs` - `npm run og:generate -- --force` rebuilds all |
+| Metadata + JSON-LD builders | `lib/seo.js`, `lib/site.js`, `components/JsonLd.js` |
+| Sitemaps | `/sitemap.xml` (all indexable pages), `/news-sitemap.xml` (Google News, last 48 h only) |
+| RSS feed | `/feed.xml` (linked from every page's `<head>`) |
+| SEO audit of every page | `npm run build && npm run seo:check` (or `npm run seo:check -- https://www.melonpost.org` for the live site) |
+
+Structured data: `NewsMediaOrganization` + `WebSite` (home), `NewsArticle` + `BreadcrumbList` (articles), `CollectionPage` + `ItemList` + `BreadcrumbList` (sections), `ProfilePage` + `Person` (authors), `AboutPage` / `ContactPage` / `WebPage` (information pages).
+
+**Adding a story:** add it to `categorypagedata.json` and run `npm run build` - its share card is generated automatically. An article may also carry an optional `updatedAt` ISO date, used for `dateModified`, `article:modified_time` and the sitemap.
+
+**After deploying:** set `NEXT_PUBLIC_SITE_URL` to the exact live address (see `.env.example`), then in Google Search Console submit `sitemap.xml` and `news-sitemap.xml`, and refresh old social previews with the Facebook Sharing Debugger / LinkedIn Post Inspector (they cache the first result for days).
+
 ## Run locally
 
 Use Node.js 20.9 or newer.

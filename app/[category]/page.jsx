@@ -13,6 +13,8 @@ import {
 import { site, pageSocialMetadata } from "@/lib/site";
 import { Byline, StoryCard } from "@/components/StoryCard";
 import NewsletterForm from "@/components/NewsletterForm";
+import JsonLd from "@/components/JsonLd";
+import { breadcrumbJsonLd, categoryCopy, collectionPageJsonLd } from "@/lib/seo";
 
 export function generateStaticParams() {
   return categorySlugs.map((slug) => ({ category: slug }));
@@ -22,11 +24,11 @@ export async function generateMetadata({ params }) {
   const { category: slug } = await params;
   const category = getCategoryName(slug);
   if (!category) return {};
+  const copy = categoryCopy(slug, category);
   return {
-    title: category,
-    description: `Latest ${category.toLowerCase()} reporting, analysis, and perspective from ${site.name}.`,
-    ...pageSocialMetadata(category, `Latest ${category.toLowerCase()} reporting, analysis, and perspective from ${site.name}.`, `/${slug}`),
-    alternates: { canonical: `${site.url}/${slug}` },
+    title: copy.title,
+    description: copy.description,
+    ...pageSocialMetadata(copy.title, copy.description, `/${slug}`),
   };
 }
 
@@ -46,6 +48,15 @@ export default async function CategoryPage({ params }) {
 
   return (
     <div>
+      <JsonLd
+        data={collectionPageJsonLd({
+          name: category,
+          description: categoryCopy(slug, category).description,
+          path: `/${slug}`,
+          articles: categoryArticles,
+        })}
+      />
+      <JsonLd data={breadcrumbJsonLd([{ name: "Home", path: "/" }, { name: category, path: `/${slug}` }])} />
       <header className="relative overflow-hidden bg-green py-12 pb-[48px] text-white after:absolute after:-bottom-[120px] after:-right-[7vw] after:size-[400px] after:rounded-full after:border after:border-gold/40 after:content-[''] after:[box-shadow:0_0_0_40px_rgba(198,166,106,.05),0_0_0_90px_rgba(198,166,106,.04)] max-[700px]:py-10">
         <div className="mx-auto w-[min(calc(100%-48px),1390px)] max-[980px]:w-[min(calc(100%-32px),1390px)] max-[700px]:w-[min(calc(100%-24px),1390px)]">
           <span className="inline-flex items-center gap-1 font-sans text-[10px] font-bold uppercase leading-[1.2] tracking-[.09em] text-gold">Section</span>

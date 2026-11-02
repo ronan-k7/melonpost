@@ -4,8 +4,11 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
+    "og:generate": "node scripts/generate-og-images.mjs",
+    "prebuild": "node scripts/generate-og-images.mjs",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "seo:check": "node scripts/seo-check.mjs"
   },
   "dependencies": {
     "lucide-react": "^0.562.0",

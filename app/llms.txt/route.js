@@ -26,6 +26,8 @@ export function GET() {
     "",
     "## Machine-readable discovery",
     `- Sitemap: ${site.url}/sitemap.xml`,
+    `- News sitemap: ${site.url}/news-sitemap.xml`,
+    `- RSS feed: ${site.url}/feed.xml`,
     `- Robots: ${site.url}/robots.txt`,
   ];
 

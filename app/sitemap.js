@@ -1,36 +1,47 @@
-import { articles, authors, categorySlugs, articleHref, categoryHref } from "@/lib/content";
-import { site } from "@/lib/site";
-import { infoPagePaths } from "@/lib/pages";
+import { articles, authors, categorySlugs, getArticlesByCategory, getArticlesByAuthor, articleHref, categoryHref } from "@/lib/content";
+import { absoluteUrl, site } from "@/lib/site";
+import { infoPagePaths, infoPages } from "@/lib/pages";
 
+const modified = (article) => new Date(article.updatedAt || article.publishedAt);
+const newest = (list) => (list.length ? new Date(Math.max(...list.map((a) => modified(a).getTime()))) : undefined);
+
+// Only real, indexable URLs belong here (the noindex /search page is left out on purpose).
+// lastModified comes from the content itself - Google ignores sitemaps whose dates are always "now".
 export default function sitemap() {
-  const staticPages = ["", "/search", ...infoPagePaths].map((path) => ({
-    url: `${site.url}${path}`,
-    lastModified: new Date("2026-08-12T12:00:00.000Z"),
-    changeFrequency: path === "" ? "hourly" : "monthly",
-    priority: path === "" ? 1 : 0.6,
-  }));
+  const home = [{ url: site.url, lastModified: newest(articles), changeFrequency: "hourly", priority: 1 }];
+
+  const staticPages = infoPagePaths.map((path) => {
+    const slug = path.replace(/^\//, "");
+    const updated = infoPages[slug]?.updated;
+    return {
+      url: absoluteUrl(path),
+      ...(updated ? { lastModified: new Date(updated) } : {}),
+      changeFrequency: "monthly",
+      priority: 0.5,
+    };
+  });
 
   const categoryPages = categorySlugs.map((slug) => ({
-    url: `${site.url}${categoryHref(slug)}`,
-    lastModified: new Date("2026-08-12T12:00:00.000Z"),
-    changeFrequency: "daily",
+    url: absoluteUrl(categoryHref(slug)),
+    lastModified: newest(getArticlesByCategory(slug)),
+    changeFrequency: "hourly",
     priority: 0.8,
   }));
 
   const authorPages = authors.map((author) => ({
-    url: `${site.url}/author/${author.slug}`,
-    lastModified: new Date("2026-08-12T12:00:00.000Z"),
+    url: absoluteUrl(`/author/${author.slug}`),
+    lastModified: newest(getArticlesByAuthor(author.slug)),
     changeFrequency: "weekly",
-    priority: 0.6,
+    priority: 0.5,
   }));
 
   const articlePages = articles.map((article) => ({
-    url: `${site.url}${articleHref(article)}`,
-    lastModified: new Date(article.publishedAt),
+    url: absoluteUrl(articleHref(article)),
+    lastModified: modified(article),
     changeFrequency: "monthly",
     priority: 0.7,
-    images: [`${site.url}${article.image}`, `${site.url}${article.secondaryImage}`],
+    images: [article.image, article.secondaryImage].filter(Boolean).map((src) => absoluteUrl(src)),
   }));
 
-  return [...staticPages, ...categoryPages, ...authorPages, ...articlePages];
+  return [...home, ...categoryPages, ...articlePages, ...authorPages, ...staticPages];
 }

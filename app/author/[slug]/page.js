@@ -10,6 +10,8 @@ import {
   articleHref,
 } from "@/lib/content";
 import { site, pageSocialMetadata } from "@/lib/site";
+import JsonLd from "@/components/JsonLd";
+import { authorDescription, breadcrumbJsonLd, profilePageJsonLd } from "@/lib/seo";
 
 export function generateStaticParams() {
   return authors.map((author) => ({ slug: author.slug }));
@@ -19,11 +21,11 @@ export async function generateMetadata({ params }) {
   const { slug } = await params;
   const author = getAuthor(slug);
   if (!author) return {};
+  const description = authorDescription(author);
   return {
     title: author.name,
-    description: `${author.name}, ${author.role} at ${site.name}. ${author.bio}`,
-    ...pageSocialMetadata(author.name, `${author.name}, ${author.role} at ${site.name}. ${author.bio}`, `/author/${slug}`),
-    alternates: { canonical: `${site.url}/author/${slug}` },
+    description,
+    ...pageSocialMetadata(author.name, description, `/author/${slug}`),
   };
 }
 
@@ -36,6 +38,8 @@ export default async function AuthorPage({ params }) {
 
   return (
     <div>
+      <JsonLd data={profilePageJsonLd(author, stories)} />
+      <JsonLd data={breadcrumbJsonLd([{ name: "Home", path: "/" }, { name: "Authors", path: "/authors" }, { name: author.name, path: `/author/${slug}` }])} />
       <section className="bg-[linear-gradient(110deg,#1a3a5c_0_68%,#152f4a_68%)] py-[58px] text-white max-[700px]:py-[35px]">
         <div className="mx-auto grid w-[min(calc(100%-48px),1390px)] grid-cols-[260px_minmax(0,1fr)] items-center gap-[52px] max-[1200px]:grid-cols-[230px_minmax(0,1fr)] max-[1200px]:gap-[35px] max-[980px]:w-[min(calc(100%-32px),1390px)] max-[980px]:grid-cols-[230px_1fr] max-[700px]:w-[min(calc(100%-24px),1390px)] max-[700px]:grid-cols-[110px_1fr] max-[700px]:items-start max-[700px]:gap-5">
           <div className="relative aspect-square overflow-hidden rounded-full border border-gold-light/50">

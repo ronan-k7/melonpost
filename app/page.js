@@ -10,6 +10,8 @@ import {
   categoryHref,
 } from "@/lib/content";
 import { absoluteUrl, site, pageSocialMetadata } from "@/lib/site";
+import JsonLd from "@/components/JsonLd";
+import { organizationJsonLd, websiteJsonLd } from "@/lib/seo";
 import {
   CompactStory,
   SectionHeading,
@@ -37,8 +39,13 @@ const marketRows = [
 
 export const metadata = {
   title: { absolute: `${site.name} — Independent journalism and global perspectives` },
-  ...pageSocialMetadata(`${site.name} — Independent journalism and global perspectives`, site.tagline),
-  alternates: { canonical: site.url },
+  description:
+    "Independent reporting and analysis across world affairs, politics, business, finance, technology, health and investigations.",
+  ...pageSocialMetadata(
+    `${site.name} — Independent journalism and global perspectives`,
+    "Independent reporting and analysis across world affairs, politics, business, finance, technology, health and investigations.",
+    "/"
+  ),
 };
 
 // ---------------------------------------------------------------
@@ -142,26 +149,10 @@ export default function HomePage() {
   const editorPicks = pickAny(articles, usedSlugs, 6);
   markUsed(usedSlugs, editorPicks);
 
-  const websiteJsonLd = {
-    "@context": "https://schema.org",
-    "@type": "NewsMediaOrganization",
-    name: site.name,
-    url: site.url,
-    description: site.tagline,
-    sameAs: Object.values(site.socials),
-    potentialAction: {
-      "@type": "SearchAction",
-      target: `${site.url}/search?q={search_term_string}`,
-      "query-input": "required name=search_term_string",
-    },
-  };
-
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteJsonLd) }}
-      />
+      <JsonLd data={organizationJsonLd()} />
+      <JsonLd data={websiteJsonLd()} />
       <div className="mx-auto w-[min(calc(100%-48px),1390px)] pt-[22px] max-[980px]:w-[min(calc(100%-32px),1390px)] max-[700px]:w-[min(calc(100%-24px),1390px)] max-[700px]:pt-3">
         <HomeLead lead={lead} author={leadAuthor} sideLead={sideLead} />
 

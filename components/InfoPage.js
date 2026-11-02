@@ -3,6 +3,8 @@ import { ArrowRight, Mail } from "lucide-react";
 import { infoPages, resourceLinks } from "@/lib/pages";
 import { formatDate } from "@/lib/content";
 import { site } from "@/lib/site";
+import JsonLd from "@/components/JsonLd";
+import { breadcrumbJsonLd, webPageJsonLd } from "@/lib/seo";
 
 const wrap =
   "mx-auto w-[min(calc(100%-48px),1390px)] max-[980px]:w-[min(calc(100%-32px),1390px)] max-[700px]:w-[min(calc(100%-24px),1390px)]";
@@ -102,6 +104,8 @@ export default function InfoPage({ slug }) {
   const page = infoPages[slug];
   return (
     <div>
+      <JsonLd data={webPageJsonLd({ type: slug === "contact" ? "ContactPage" : "WebPage", name: page.title, description: page.description, path: `/${slug}`, dateModified: page.updated })} />
+      <JsonLd data={breadcrumbJsonLd([{ name: "Home", path: "/" }, { name: page.title, path: `/${slug}` }])} />
       <PageHeader eyebrow={page.eyebrow} title={page.title} intro={page.intro} updated={page.updated} />
       <div className={`${wrap} grid grid-cols-[280px_minmax(0,1fr)] items-start gap-[72px] pb-[100px] pt-[60px] max-[980px]:grid-cols-1 max-[980px]:gap-10 max-[700px]:pt-9`}>
         <aside className="sticky top-6 flex flex-col gap-10 max-[980px]:static max-[980px]:order-2">

@@ -27,7 +27,9 @@ import {
   articleHref,
   categoryHref,
 } from "@/lib/content";
-import { absoluteUrl, site, slugify } from "@/lib/site";
+import { site, slugify } from "@/lib/site";
+import JsonLd from "@/components/JsonLd";
+import { articleBreadcrumbs, articleMetadata, newsArticleJsonLd } from "@/lib/seo";
 import { Byline, StoryCard } from "@/components/StoryCard";
 import ShareTools from "@/components/ShareTools";
 import NewsletterForm from "@/components/NewsletterForm";
@@ -44,37 +46,8 @@ export async function generateMetadata({ params }) {
   const { category, slug } = await params;
   const article = getArticle(slug);
   if (!article || slugify(article.category) !== category) return {};
-  const canonical = `${site.url}${articleHref(article)}`;
-  return {
-    title: article.title,
-    keywords: article.keywords || article.tags,
-    description: article.metaDescription || article.excerpt,
-    alternates: { canonical },
-    openGraph: {
-      type: "article",
-      title: article.title,
-      description: article.metaDescription || article.excerpt,
-      url: canonical,
-      publishedTime: article.publishedAt,
-      authors: [`${site.url}/author/${article.authorSlug}`],
-      section: article.category,
-      tags: article.tags || [],
-      images: [
-        {
-          url: absoluteUrl(article.image),
-          width: article.imageWidth || 1200,
-          height: article.imageHeight || 630,
-          alt: article.imageAlt || article.title,
-        },
-      ],
-    },
-    twitter: {
-      card: "summary_large_image",
-      title: article.title,
-      description: article.metaDescription || article.excerpt,
-      images: [absoluteUrl(article.image)],
-    },
-  };
+  // The story's own featured image is its share card (see lib/seo.js).
+  return articleMetadata(article, getAuthor(article.authorSlug));
 }
 
 const socialLinks = [
@@ -103,61 +76,17 @@ export default async function ArticlePage({ params }) {
     ...articles.filter(item => item.slug !== article.slug && !related.some(story => story.slug === item.slug)),
   ].slice(0, 4);
 
-  const newsArticleJsonLd = {
-    "@context": "https://schema.org",
-    "@type": "NewsArticle",
-    headline: article.title,
-    description: article.metaDescription || article.excerpt,
-    image: [absoluteUrl(article.image), absoluteUrl(article.secondaryImage)],
-    datePublished: article.publishedAt,
-    dateModified: article.publishedAt,
-    articleSection: article.category,
-    keywords: article.tags,
-    citation: article.sources?.map(source => source.url),
-    wordCount,
-    author: {
-      "@type": author.type || "Person",
-      name: author.name,
-      url: `${site.url}/author/${author.slug}`,
-    },
-    publisher: {
-      "@type": "NewsMediaOrganization",
-      name: site.name,
-      url: site.url,
-    },
-    mainEntityOfPage: articleUrl,
-    isAccessibleForFree: true,
-  };
-
-  const breadcrumbJsonLd = {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Home", item: site.url },
-      {
-        "@type": "ListItem",
-        position: 2,
-        name: article.category,
-        item: `${site.url}${categoryHref(slugify(article.category))}`,
-      },
-      { "@type": "ListItem", position: 3, name: article.title, item: articleUrl },
-    ],
-  };
+  const newsArticleSchema = newsArticleJsonLd(article, author, wordCount);
+  const breadcrumbJsonLd = articleBreadcrumbs(article);
 
   if (article.template === "client-long-read") {
-    return <ClientArticlePage article={article} author={author} related={fallbackRelated} schema={newsArticleJsonLd} breadcrumbs={breadcrumbJsonLd} />;
+    return <ClientArticlePage article={article} author={author} related={fallbackRelated} schema={newsArticleSchema} breadcrumbs={breadcrumbJsonLd} />;
   }
 
   return (
     <article>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(newsArticleJsonLd) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
-      />
+      <JsonLd data={newsArticleSchema} />
+      <JsonLd data={breadcrumbJsonLd} />
 
       <header className="mx-auto w-[min(calc(100%-48px),1120px)] pb-[38px] pt-[45px] max-[980px]:w-[min(calc(100%-32px),1120px)] max-[700px]:w-[min(calc(100%-24px),1120px)] max-[700px]:pt-7">
         <nav className="mb-[38px] flex items-center gap-2 font-sans text-[9px] uppercase tracking-[.08em] text-muted max-[700px]:mb-[25px] [&_a:hover]:text-red" aria-label="Breadcrumb">

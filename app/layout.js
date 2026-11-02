@@ -23,13 +23,25 @@ export const metadata = {
   authors: [{ name: site.name, url: site.url }],
   creator: site.name,
   publisher: site.name,
-  alternates: { canonical: site.url },
+  category: "news",
+  // Canonical + social tags come from pageSocialMetadata() so every page gets its own.
   ...pageSocialMetadata(site.name, site.tagline),
   icons: {
     icon: [{ url: "/favicon.ico", sizes: "any" }, { url: "/melonpost-favicon.png", type: "image/png", sizes: "48x48" }],
     apple: [{ url: "/apple-icon.png", sizes: "180x180", type: "image/png" }],
   },
-  robots: { index: true, follow: true },
+  // max-image-preview:large is what lets Google show big thumbnails in Search, Top Stories and Discover.
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: { index: true, follow: true, "max-image-preview": "large", "max-snippet": -1, "max-video-preview": -1 },
+  },
+  // Search Console / Bing Webmaster meta-tag verification (optional, set in the host's env vars).
+  verification: {
+    google: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION || undefined,
+    other: process.env.NEXT_PUBLIC_BING_SITE_VERIFICATION ? { "msvalidate.01": process.env.NEXT_PUBLIC_BING_SITE_VERIFICATION } : undefined,
+  },
+  formatDetection: { telephone: false, address: false, email: false },
 };
 
 export const viewport = {
