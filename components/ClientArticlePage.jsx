@@ -224,7 +224,7 @@ export default function ClientArticlePage({
               </ul>
             </section>
             <section className={styles.timeline}>
-              <h2>Key dates</h2>
+              <h2>Timeline</h2>
               <ol>
                 {article.timeline.map((event) => (
                   <li key={event.date}>
