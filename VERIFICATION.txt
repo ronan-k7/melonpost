@@ -1,0 +1,14 @@
+Emily Carter : initials EC, image filename and profile verified
+James Bennett : initials JB, image filename and profile verified
+Olivia Brooks : initials OB, image filename and profile verified
+Michael Reed : initials MR, image filename and profile verified
+Sarah Mitchell : initials SM, image filename and profile verified
+Rachel Parker : initials RP, image filename and profile verified
+All story author references point to the renamed profiles.
+Article headline, subtitle and body match the previous approved ZIP and the supplied text.
+Homepage extra description is copied exactly from the first article paragraph.
+Author hero email, social icons and statistics removed; former profile URLs redirect correctly.
+Article social metadata continues to use the story image.
+Production build passed with 70 pages generated using next build --webpack.
+Homepage and author profile visually checked at desktop and 390px mobile widths. No horizontal overflow or browser errors observed.
+All six old photo assets replaced by matching name-based initials SVG files.

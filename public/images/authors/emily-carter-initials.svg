@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512" role="img" aria-labelledby="title desc">
+  <title id="title">Emily Carter initials</title>
+  <desc id="desc">EC, a two-letter author monogram in navy on warm cream.</desc>
+  <rect width="512" height="512" fill="#f8f3e9"/>
+  <circle cx="256" cy="256" r="194" fill="none" stroke="#cbbba2" stroke-width="2"/>
+  <circle cx="256" cy="256" r="182" fill="none" stroke="#e4d9c9" stroke-width="1"/>
+  <text x="256" y="265" text-anchor="middle" dominant-baseline="middle" font-family="Georgia, 'Times New Roman', serif" font-size="178" font-weight="400" letter-spacing="-7" fill="#173550">EC</text>
+  <path d="M224 369H288" stroke="#842936" stroke-width="4"/>
+</svg>

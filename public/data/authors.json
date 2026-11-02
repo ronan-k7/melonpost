@@ -1,0 +1,68 @@
+[
+  {
+    "slug": "emily-carter",
+    "name": "Emily Carter",
+    "role": "Chief Political Correspondent",
+    "location": "Washington, D.C.",
+    "bio": "Emily Carter covers U.S. politics, the courts and government accountability. Her reporting focuses on how decisions in Washington affect institutions, businesses and everyday life.",
+    "longBio": "Emily writes about the people and institutions shaping American public life, from the White House and Congress to the federal courts. She follows policy debates, legal developments and questions of public accountability, bringing together official records and the practical consequences of government decisions.",
+    "image": "/images/authors/emily-carter-initials.svg",
+    "initials": "EC",
+    "imageAlt": "Emily Carter initials, EC"
+  },
+  {
+    "slug": "james-bennett",
+    "name": "James Bennett",
+    "role": "Opinion Editor",
+    "location": "Chicago, Illinois",
+    "bio": "James Bennett writes about public policy, civic life and the institutions Americans rely on. His columns examine competing arguments and the choices behind the headlines.",
+    "longBio": "James focuses on the relationship between public decisions and civic trust. His essays explore government, the law and the responsibilities of leadership, with an emphasis on clear arguments and careful attention to evidence. He also edits commentary on the political and social questions shaping the United States.",
+    "image": "/images/authors/james-bennett-initials.svg",
+    "initials": "JB",
+    "imageAlt": "James Bennett initials, JB"
+  },
+  {
+    "slug": "olivia-brooks",
+    "name": "Olivia Brooks",
+    "role": "Economics Correspondent",
+    "location": "New York, New York",
+    "bio": "Olivia Brooks covers the economy, financial markets and the changing world of work. She explains what shifts in prices, borrowing costs and business activity mean for households.",
+    "longBio": "Olivia reports on the connections between economic policy and everyday financial decisions. Her coverage follows inflation, employment, housing and the businesses that shape local communities. She uses economic data and clear explanations to make complex developments accessible to a broad audience.",
+    "image": "/images/authors/olivia-brooks-initials.svg",
+    "initials": "OB",
+    "imageAlt": "Olivia Brooks initials, OB"
+  },
+  {
+    "slug": "michael-reed",
+    "name": "Michael Reed",
+    "role": "World Affairs & Climate Editor",
+    "location": "Boston, Massachusetts",
+    "bio": "Michael Reed covers international affairs, energy and climate policy. He connects developments overseas with the decisions facing communities, companies and policymakers in the United States.",
+    "longBio": "Michael writes about diplomacy, energy security and the effects of a changing climate. His work follows the links between international negotiations, national policy and local consequences. He focuses on the people affected by these decisions and the evidence needed to understand what comes next.",
+    "image": "/images/authors/michael-reed-initials.svg",
+    "initials": "MR",
+    "imageAlt": "Michael Reed initials, MR"
+  },
+  {
+    "slug": "sarah-mitchell",
+    "name": "Sarah Mitchell",
+    "role": "Science & Technology Editor",
+    "location": "San Francisco, California",
+    "bio": "Sarah Mitchell covers science, technology and health, with a focus on artificial intelligence, medical research and digital policy. She explains emerging ideas and the questions they raise for everyday life.",
+    "longBio": "Sarah follows the research, products and public decisions shaping science and technology. Her coverage examines what new findings show, where uncertainty remains and how innovations affect people. She writes about artificial intelligence, medicine, space and the rules governing a rapidly changing digital world.",
+    "image": "/images/authors/sarah-mitchell-initials.svg",
+    "initials": "SM",
+    "imageAlt": "Sarah Mitchell initials, SM"
+  },
+  {
+    "slug": "rachel-parker",
+    "name": "Rachel Parker",
+    "role": "Culture & Features Writer",
+    "location": "Los Angeles, California",
+    "bio": "Rachel Parker writes about arts, books, culture and the places people call home. Her features explore how creative work and shared histories shape American life.",
+    "longBio": "Rachel covers the connections between culture, place and memory. She writes about artists, books, museums and the everyday experiences that reveal how communities change. Her features bring a close, thoughtful perspective to the stories people tell about themselves and the world around them.",
+    "image": "/images/authors/rachel-parker-initials.svg",
+    "initials": "RP",
+    "imageAlt": "Rachel Parker initials, RP"
+  }
+]
