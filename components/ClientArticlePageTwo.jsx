@@ -81,6 +81,7 @@ export default function ClientArticlePageTwo({
         </figure>
 
         <div className={styles.layout}>
+          <aside className={styles.sidebar}>
           <nav className={styles.contents} aria-labelledby="contents-heading">
             <h2 id="contents-heading">In this story</h2>
             <ol>
@@ -91,6 +92,20 @@ export default function ClientArticlePageTwo({
               ))}
             </ol>
           </nav>
+          {article.timeline && article.timeline.length > 0 ? (
+            <section className={styles.timeline} aria-labelledby="timeline-heading">
+              <h2 id="timeline-heading">Timeline</h2>
+              <ol>
+                {article.timeline.map((event) => (
+                  <li key={event.date}>
+                    <strong>{event.date}</strong>
+                    <p>{event.text}</p>
+                  </li>
+                ))}
+              </ol>
+            </section>
+          ) : null}
+          </aside>
 
           <div className={styles.story}>
             <div className={styles.body}>
@@ -118,7 +133,24 @@ export default function ClientArticlePageTwo({
                       {(section.quotes || [])
                         .filter((quote) => quote.afterParagraph === pi)
                         .map((quote, qi) => (
-                          <blockquote className={styles.pullQuote} key={qi}>
+                          <blockquote
+                            className={
+                              quote.variant === "highlight"
+                                ? styles.highlightQuote
+                                : styles.pullQuote
+                            }
+                            key={qi}
+                          >
+                            {quote.stats ? (
+                              <ul className={styles.stats}>
+                                {quote.stats.map((stat) => (
+                                  <li key={stat.label}>
+                                    <strong>{stat.value}</strong>
+                                    <span>{stat.label}</span>
+                                  </li>
+                                ))}
+                              </ul>
+                            ) : null}
                             <p>{quote.text}</p>
                             {quote.cite ? <cite>{quote.cite}</cite> : null}
                           </blockquote>

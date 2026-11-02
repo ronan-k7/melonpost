@@ -2094,7 +2094,32 @@
       "suppliedSubtitle": "Beauty, Power, Ambition and the Price of Loyalty: From the White House to the Herrera Velutini Banking Dynasty",
       "summary": "Beauty, Power, Ambition and the Price of Loyalty: From the White House to the Herrera Velutini Banking Dynasty",
       "keyTakeaways": [],
-      "timeline": [],
+      "timeline": [
+        {
+          "date": "2024",
+          "text": "Habba reportedly first met and worked with the Herrera banking interests, before entering public service."
+        },
+        {
+          "date": "December 2025",
+          "text": "Her public service concluded and she began considering a different professional future. She then reportedly telephoned the family on a Friday afternoon and asked to meet."
+        },
+        {
+          "date": "January 2026",
+          "text": "President Trump pardoned Julio Herrera Velutini."
+        },
+        {
+          "date": "February 26, 2026",
+          "text": "A reported business lunch with Julio Herrera Velutini, family members and advisers took place at the family\u2019s London headquarters."
+        },
+        {
+          "date": "March 23, 2026 (approx.)",
+          "text": "Twenty-five days later, Habba reportedly requested another London meeting and discussed her divorce and her relationship with Turhan Mildon. The relationship led to an engagement and a wedding celebration reportedly estimated at about $10 million."
+        },
+        {
+          "date": "October 31, 2026",
+          "text": "Trump publicly criticized the reported compensation agreement at Mar-a-Lago."
+        }
+      ],
       "sources": [],
       "body": {
         "sections": [
@@ -2219,6 +2244,24 @@
               "Beauty may command admiration. Power may open doors. Strength may establish a reputation. Wealth may provide extraordinary freedom.",
               "But none of those qualities alone guarantees the confidence required to lead within a multigenerational financial institution.",
               "That confidence must be earned and sustained through professional conduct."
+            ],
+            "quotes": [
+              {
+                "afterParagraph": 2,
+                "variant": "highlight",
+                "stats": [
+                  {
+                    "value": "20+",
+                    "label": "law firms"
+                  },
+                  {
+                    "value": "$100M",
+                    "label": "yearly legal and advisory spending"
+                  }
+                ],
+                "text": "Habba\u2019s responsibilities included coordinating more than 20 law firms and overseeing approximately $100 million in annual legal and advisory expenditure. If accurate, that description would place her at the center of a substantial operation requiring sustained coordination, oversight and reporting.",
+                "cite": ""
+              }
             ]
           },
           {
