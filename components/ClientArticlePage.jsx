@@ -10,7 +10,7 @@ import styles from "./ClientArticlePage.module.css";
 function ArticlePhoto({ photo, portrait = false }) {
   return (
     <figure className={`${styles.photo} ${portrait ? styles.portrait : ""}`}>
-      <Image
+      {/* <Image
         src={photo.src}
         alt={photo.alt}
         width={photo.width}
@@ -21,7 +21,7 @@ function ArticlePhoto({ photo, portrait = false }) {
             : "(max-width: 900px) 100vw, 760px"
         }
       />
-      <figcaption>{photo.caption}</figcaption>
+      <figcaption>{photo.caption}</figcaption> */}
     </figure>
   );
 }
