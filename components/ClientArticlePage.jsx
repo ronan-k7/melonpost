@@ -1,3 +1,4 @@
+import { Fragment } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { CalendarDays, Clock3, ArrowUpRight } from "lucide-react";
@@ -115,15 +116,33 @@ export default function ClientArticlePage({
                     />
                   )}
                   {section.paragraphs.map((paragraph, pi) => (
-                    <p
-                      key={pi}
-                      data-original-paragraph
-                      className={
-                        index === 0 && pi === 0 ? styles.dropcap : undefined
-                      }
-                    >
-                      {paragraph}
-                    </p>
+                    <Fragment key={pi}>
+                      <p
+                        data-original-paragraph
+                        className={
+                          index === 0 && pi === 0 ? styles.dropcap : undefined
+                        }
+                      >
+                        {paragraph}
+                      </p>
+                      {(section.quotes || [])
+                        .filter((quote) => quote.afterParagraph === pi)
+                        .map((quote, qi) => (
+                          <blockquote className={styles.pullQuote} key={qi}>
+                            {quote.stats?.length ? (
+                              <div className={styles.quoteStats}>
+                                {quote.stats.map((stat) => (
+                                  <div key={stat.label}>
+                                    <strong>{stat.value}</strong>
+                                    <span>{stat.label}</span>
+                                  </div>
+                                ))}
+                              </div>
+                            ) : null}
+                            <p>{quote.text}</p>
+                          </blockquote>
+                        ))}
+                    </Fragment>
                   ))}
                 </section>
               ))}
