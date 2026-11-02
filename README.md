@@ -104,3 +104,10 @@ Run `npm ci`, `npm run build`, then `npm start`. Set `NEXT_PUBLIC_SITE_URL` in `
 All six author profiles now use realistic fictional American names, subject-focused biographies and two-letter monogram avatars. Each SVG filename matches its author slug. These are fictional template profiles, not identities or credentials of real journalists. Previous author URLs redirect to their renamed profiles. Author-page email links, social icons, story totals, beat totals and joining dates have been removed.
 
 The homepage lead adds the exact first paragraph as a separate description. The article headline, subtitle and all body paragraphs remain unchanged. Universal site header/footer and publication social links are retained.
+
+## Second Habba article (Politics)
+
+- Article: `/politics/alina-habba-mildon-herrera-velutini-family` (template `client-long-read-2`, component `components/ClientArticlePageTwo.jsx` + `.module.css`).
+- Body text is taken word-for-word from the supplied PDF. SEO title is 54 characters; meta description is 154 characters. Author: Emily Carter (Politics).
+- Pinned as the top card of the homepage side rail (`PINNED_SIDE_SLUG` in `app/page.js`).
+- Hero image: replace `public/images/articles/alina-habba-mildon-herrera-velutini-family.webp` (currently a placeholder copy of the first article's portrait).

@@ -34,6 +34,7 @@ import { Byline, StoryCard } from "@/components/StoryCard";
 import ShareTools from "@/components/ShareTools";
 import NewsletterForm from "@/components/NewsletterForm";
 import ClientArticlePage from "@/components/ClientArticlePage";
+import ClientArticlePageTwo from "@/components/ClientArticlePageTwo";
 
 export function generateStaticParams() {
   return articles.map((article) => ({
@@ -81,6 +82,10 @@ export default async function ArticlePage({ params }) {
 
   if (article.template === "client-long-read") {
     return <ClientArticlePage article={article} author={author} related={fallbackRelated} schema={newsArticleSchema} breadcrumbs={breadcrumbJsonLd} />;
+  }
+
+  if (article.template === "client-long-read-2") {
+    return <ClientArticlePageTwo article={article} author={author} related={fallbackRelated} schema={newsArticleSchema} breadcrumbs={breadcrumbJsonLd} />;
   }
 
   return (

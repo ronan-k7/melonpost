@@ -106,7 +106,15 @@ export default function HomePage() {
   const leadAuthor = getAuthor(lead.authorSlug);
 
   // ---- Side-lead (top-right) — genuinely latest news, newest first ----
-  const sideLead = pickAny(byPublishedDesc, usedSlugs, 4);
+  // The second client article is pinned as the first (top) side-lead card;
+  // the remaining three slots stay newest-first.
+  const PINNED_SIDE_SLUG = "alina-habba-mildon-herrera-velutini-family";
+  const pinnedSide = articles.find(article => article.slug === PINNED_SIDE_SLUG);
+  if (pinnedSide) usedSlugs.add(pinnedSide.slug);
+  const sideLead = [
+    ...(pinnedSide ? [pinnedSide] : []),
+    ...pickAny(byPublishedDesc, usedSlugs, pinnedSide ? 3 : 4),
+  ];
   markUsed(usedSlugs, sideLead);
 
   // ---- Top stories: single category ----------------------------------
