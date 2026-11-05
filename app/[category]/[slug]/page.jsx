@@ -513,10 +513,10 @@ export default async function ArticlePage({ params }) {
               sizes="(max-width: 900px) 100vw, 1200px"
             />
           </div>
-          <figcaption className="pt-[9px] font-sans text-[9px] leading-[1.45] text-muted">
+          {/* <figcaption className="pt-[9px] font-sans text-[9px] leading-[1.45] text-muted">
             Melonpost&apos;s visual desk illustrates the places, institutions, and
             people at the center of this report.
-          </figcaption>
+          </figcaption> */}
         </figure>
       ) : null}
 
@@ -582,10 +582,10 @@ export default async function ArticlePage({ params }) {
                         sizes="(max-width: 750px) 100vw, 720px"
                       />
                     </div>
-                    <figcaption className="pt-[9px] font-sans text-[9px] leading-[1.45] text-muted">
+                    {/* <figcaption className="pt-[9px] font-sans text-[9px] leading-[1.45] text-muted">
                       A second view adds geographic and institutional context to the
                       developing story.
-                    </figcaption>
+                    </figcaption> */}
                   </figure>
                 ) : null}
 

@@ -384,6 +384,83 @@
           }
         ]
       }
+    },
+    {
+      "id": 6,
+      "title": "Russia Bombs Kharkiv Hospital Ahead of Abu Dhabi Talks",
+      "slug": "russia-bombs-kharkiv-hospital-ahead-of-abu-dhabi-talks",
+      "category": "World",
+      "categorySlug": "world",
+      "authorSlug": "michael-reed",
+      "image": "/images/articles/kharkiv-hospital-strike-ukraine-2026.webp",
+      "excerpt": "Russian strikes hit a Kharkiv hospital and cut power across Ukraine as US, Russian and Ukrainian delegations prepare for Abu Dhabi talks on November 10-11.",
+      "summary": "Russian strikes hit a Kharkiv hospital and cut power across Ukraine as US, Russian and Ukrainian delegations prepare for Abu Dhabi talks on November 10-11.",
+      "publishedAt": "2026-11-05T09:00:00.000Z",
+      "timeAgo": "1h ago",
+      "readingTime": 4,
+      "wordCount": 640,
+      "keyTakeaways": [
+        "A Russian barrage injured at least 73 people at a Kharkiv hospital, and overnight strikes this week knocked out power generation sites and substations in nine Ukrainian regions.",
+        "A strike on an aid distribution point in Zaporizhzhia region killed at least 33 people, and the UN human rights mission says it likely violated international law.",
+        "US, Russian and Ukrainian officials are due to meet in Abu Dhabi on November 10 and 11, while the Kremlin says it hopes Trump keeps pushing for peace after the US midterms."
+      ],
+      "quote": {
+        "text": "Russia continues to kill people.",
+        "author": "Volodymyr Zelenskyy, President of Ukraine"
+      },
+      "body": {
+        "sections": [
+          {
+            "id": "kharkiv-hospital-battered-overnight-barrage",
+            "title": "Kharkiv Hospital Battered in Overnight Barrage",
+            "paragraphs": [
+              "Russia bombed a hospital in Kharkiv and pounded power stations across Ukraine this week, just days before U.S., Russian and Ukrainian delegations are set to meet in Abu Dhabi for a fresh round of peace talks. At least 73 people were hurt when missiles and aerial bombs hit the city's clinical hospital on Monday night, President Volodymyr Zelenskyy said, damaging the cardiology ward where patients were receiving care.",
+              "Kharkiv Mayor Ihor Terekhov said the blasts shattered more than 1,000 windows. Zelenskyy said Moscow launched 289 attack drones, 17 ballistic missiles and 59 cruise missiles overnight, aiming mainly at power plants and substations in nine regions."
+            ]
+          },
+          {
+            "id": "aid-hub-strike-draws-un-condemnation",
+            "title": "Deadly Aid Hub Strike Draws UN Condemnation",
+            "paragraphs": [
+              "The hospital strike came a day after a Russian attack on an aid distribution point in Komyshuvakha, a frontline village in the Zaporizhzhia region, killed at least 33 people, according to Ukrainian officials. The site, a school closed to students because of its proximity to the fighting, served as a shelter and a weekly handout location. Rescuers and police officers were among the dead.",
+              "Danielle Bell, head of the UN human rights mission in Ukraine, said the timing and location of the distribution were widely known. In her view, Russian forces either knew people were gathered there or failed to take basic steps to find out. The UN mission said the attack likely violated international law."
+            ]
+          },
+          {
+            "id": "power-grid-under-mounting-strain",
+            "title": "Ukraine's Power Grid Buckles as Winter Nears",
+            "paragraphs": [
+              "The pressure on the grid continued Wednesday. Zelenskyy said overnight attacks damaged generation sites and substations in nine regions, leaving emergency outages in many cities. Russia's Defence Ministry said it hit two power stations in the Kyiv and Zhytomyr regions. A day earlier, more than 180,000 people in Zhytomyr were without electricity, according to the regional governor.",
+              "Ukraine is hitting back. Local officials in Russia's Belgorod region reported three deaths from Ukrainian drone strikes, and a fire broke out at an Ozon warehouse in southern Russia. Moscow said it shot down 709 Ukrainian drones over 14 regions, Crimea and the Black and Azov seas, while Crimea also reported power cuts."
+            ]
+          },
+          {
+            "id": "kyiv-fountains-hot-tea-and-fake-alerts",
+            "title": "Fountains, Hot Tea and Fake Alerts: Daily Life in Kyiv",
+            "paragraphs": [
+              "In Kyiv, overnight strikes caused outages of power and water lasting for hours, and residents were told to use public drinking fountains. Authorities set up emergency centers offering hot tea and outlets for charging phones in the hardest-hit neighborhoods. Odesa moved to scheduled blackouts as winter approaches.",
+              "The fighting is also spilling into digital life. Late Sunday, users of Ukraine's air-raid alert app received fake warnings of nuclear and chemical threats around Kyiv, and Ukraine and Russia have accused each other of hacking emergency alert systems."
+            ]
+          },
+          {
+            "id": "kremlin-watches-washington-after-midterms",
+            "title": "Kremlin Eyes Washington After Democratic Midterm Win",
+            "paragraphs": [
+              "Washington's next move is the main unknown. Tuesday's midterm elections handed Democrats a sweeping win, and the Kremlin responded by saying it hopes President Donald Trump keeps pursuing peace. Spokesman Dmitry Peskov called the shift an internal American matter.",
+              "A Democratic-led Congress takes over in January and is expected to be more outspoken in support of Kyiv, though there is little expectation that the U.S. will return as a major financial backer. Reporters in Kyiv note that no major U.S. military aid package has been approved since Trump took office, with Europe largely filling the gap."
+            ]
+          },
+          {
+            "id": "diplomacy-picks-up-before-abu-dhabi",
+            "title": "Diplomacy Picks Up Speed Before Abu Dhabi",
+            "paragraphs": [
+              "Delegations will gather in Abu Dhabi on November 10 and 11. U.S. special envoy Steve Witkoff said the agenda covers post-war security arrangements, de-escalation and humanitarian measures. Russian President Vladimir Putin agreed to the round after meeting Witkoff in St. Petersburg on October 21.",
+              "Before that, Witkoff said, U.S. negotiators will meet officials from France, Germany, Britain, the European Union and NATO in Brussels to discuss security guarantees for Ukraine and reconstruction. The last U.S.-mediated talks took place in February, before the U.S. and Israel went to war with Iran.",
+              "On Wednesday, Zelenskyy also awarded first lady Melania Trump the Order of Princess Olga, crediting her role in brokering a six-day local ceasefire that let civilians leave the Russian-occupied town of Oleshky. That pause expired Sunday."
+            ]
+          }
+        ]
+      }
     }
   ],
   "us": [
