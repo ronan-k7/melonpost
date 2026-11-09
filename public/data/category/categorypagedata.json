@@ -879,6 +879,126 @@
           "url": "https://abc7news.com/post/live-election-results-california-voters-decide-proposition-40-billionaire-tax/20012875/"
         }
       ]
+    },
+    {
+      "id": 7,
+      "title": "Stephen Miller Starts as Trump's Chief of Staff Monday",
+      "slug": "stephen-miller-becomes-trump-white-house-chief-of-staff",
+      "category": "US",
+      "categorySlug": "us",
+      "authorSlug": "emily-carter",
+      "image": "/images/articles/stephen-miller-white-house-chief-of-staff-2026.webp",
+      "excerpt": "Stephen Miller begins as White House chief of staff after Susie Wiles' exit, as Democrats who won Congress vow investigations. Here is what to know today.",
+      "summary": "Stephen Miller begins as White House chief of staff after Susie Wiles' exit, as Democrats who won Congress vow investigations. Here is what to know today.",
+      "publishedAt": "2026-11-09T12:00:00.000Z",
+      "timeAgo": "Just now",
+      "readingTime": 3,
+      "wordCount": 463,
+      "keyTakeaways": [
+        "Stephen Miller takes over as White House chief of staff Monday, replacing Susie Wiles, who is moving to President Trump's political operation.",
+        "The change comes days after Democrats won control of the House and Senate, and Democratic leaders have vowed to oppose and investigate Miller.",
+        "Trump also offered the press secretary job to UFC president Dana White, who said he would meet the president at the White House on Monday."
+      ],
+      "quote": null,
+      "body": {
+        "sections": [
+          {
+            "id": "miller-takes-over-from-wiles",
+            "title": "Stephen Miller Takes Over From Susie Wiles",
+            "paragraphs": [
+              "Stephen Miller begins his first day as White House chief of staff on Monday, taking over from Susie Wiles as President Donald Trump reshuffles his inner circle days after Republicans lost control of Congress in the midterm elections.",
+              "Trump announced the change Friday on Truth Social, calling Miller one of his most trusted advisers and saying Wiles will move to his political operation. A White House official told Fox News Digital that Wiles submitted her resignation Thursday night and called the transition amicable. Wiles said on X that serving Trump was the honor of a lifetime."
+            ]
+          },
+          {
+            "id": "who-miller-is-promotion-signals",
+            "title": "Who Miller Is and What His Promotion Signals",
+            "paragraphs": [
+              "Miller, previously deputy chief of staff for policy and homeland security adviser, is widely viewed as the architect of the administration's hard-line immigration policies. AP reported that the promotion signals Trump is resisting a conciliatory approach to Democrats, while The Washington Post said his agenda will probably move further right.",
+              "Wiles, 69, was the first woman to serve as chief of staff and was seen by many as a steadying influence on the president's impulses. Miller thanked her and said his mission is to support Trump and defend the republic, CBS News reported."
+            ]
+          },
+          {
+            "id": "democrats-push-back-midterm-tallies",
+            "title": "Democrats Push Back as Midterm Tallies Firm Up",
+            "paragraphs": [
+              "Democrats reacted quickly. House Democratic Leader Hakeem Jeffries, the likely next speaker, urged Trump to fire Miller, while Senate Democratic Leader Chuck Schumer said Trump had “learned nothing” from the election. Rep. Robert Garcia of California, the expected chair of the House Oversight Committee, said Democrats will keep investigating Miller.",
+              "The shake-up follows Tuesday's midterm results. As of Sunday, the Associated Press had Democrats at 54 Senate seats to Republicans' 44 and at 254 House seats to the GOP's 162, with 19 House races still uncalled. Axios reported that Miller has been preparing ways to keep the White House operating aggressively despite those Democratic majorities."
+            ]
+          },
+          {
+            "id": "dana-white-press-secretary-offer",
+            "title": "Trump Offers Press Secretary Job to Dana White",
+            "paragraphs": [
+              "Trump also said Saturday that he offered the White House press secretary job to UFC president Dana White, a friend. White said he would meet Trump at the White House on Monday. CNN earlier reported that White was not taking the job, and Trump signaled in a CBS “60 Minutes” interview that more Cabinet departures could follow."
+            ]
+          },
+          {
+            "id": "press-secretary-and-uncalled-senate-races",
+            "title": "Open Questions on Press Secretary and Senate Races",
+            "paragraphs": [
+              "Several questions remain. It is unclear whether White will accept the press secretary role. Senate control is settled, but the Mississippi and Alaska races were still uncalled Monday, with Democrat Scott Colom leading Republican Sen. Cindy Hyde-Smith by about 2,700 votes in Mississippi, WORLD Radio reported. Miller himself is also a named target of Democratic oversight plans."
+            ]
+          },
+          {
+            "id": "democrats-take-congress-in-january",
+            "title": "What Comes Next as Democrats Take Congress in January",
+            "paragraphs": [
+              "Democrats take control of Congress when the new session begins in early January, giving them committee gavels and the power to open investigations. Until then, Republicans still run both chambers. Further staff changes are possible, and Miller's first moves in the job will show how aggressively the White House plans to confront the incoming majority."
+            ]
+          }
+        ]
+      },
+      "sources": [
+        {
+          "title": "AP via Boston Globe: Stephen Miller replaces Susie Wiles as Trump's White House chief of staff after GOP's midterm defeat",
+          "url": "https://www.bostonglobe.com/2026/11/06/nation/susie-wiles-replaced-stephen-miller-white-house-chief-of-staff/"
+        },
+        {
+          "title": "NPR: Stephen Miller replaces Susie Wiles as White House chief of staff",
+          "url": "https://www.npr.org/2026/11/06/nx-s1-6032810/stephen-miller-replaces-susie-wiles-as-white-house-chief-of-staff"
+        },
+        {
+          "title": "The Washington Post: Stephen Miller is named new White House chief of staff as Susie Wiles departs",
+          "url": "https://www.washingtonpost.com/politics/2026/11/06/trump-names-stephen-miller-new-white-house-chief-staff/"
+        },
+        {
+          "title": "CBS News: Trump installs Stephen Miller as White House chief of staff, replacing Susie Wiles",
+          "url": "https://www.cbsnews.com/news/stephen-miller-trump-chief-of-staff-susie-wiles/"
+        },
+        {
+          "title": "Fox News: Trump names Stephen Miller new White House chief of staff, replacing Susie Wiles",
+          "url": "https://www.foxnews.com/politics/trump-names-stephen-miller-new-white-house-chief-staff-replacing-susie-wiles"
+        },
+        {
+          "title": "Axios: Trump replaces chief of staff Susie Wiles with Stephen Miller",
+          "url": "https://www.axios.com/2026/11/06/susie-wiles-trump-stephen-miller-chief-of-staff"
+        },
+        {
+          "title": "The Hill: Jeffries calls Miller a 'dangerous xenophobe' after promotion",
+          "url": "https://thehill.com/homenews/administration/6205195-jeffries-blasts-trump-miller-pick/"
+        },
+        {
+          "title": "PBS NewsHour (AP): Trump says he's asked UFC's Dana White to be his press secretary",
+          "url": "https://www.pbs.org/newshour/politics/trump-says-hes-asked-ufcs-dana-white-to-be-his-press-secretary"
+        },
+        {
+          "title": "ESPN: Trump offers press secretary role to Dana White; UFC boss to meet with president",
+          "url": "https://www.espn.com/espn/story/_/id/50412085/trump-offers-press-secretary-role-ufc-boss-dana-white"
+        },
+        {
+          "title": "NBC News: Trump taps Stephen Miller for chief of staff live blog",
+          "url": "https://www.nbcnews.com/politics/2026-election/live-blog/rump-taps-stephen-miller-chief-staff-wiles-cabinet-midterm-elections-rcna607914"
+        },
+        {
+          "title": "Yahoo News: Midterms 2026 results and latest updates",
+          "url": "https://www.yahoo.com/news/politics/live/midterms-2026-election-results-and-latest-updates-mississippi-votes-still-being-counted-in-senate-nail-biter-after-democrats-take-control-of-congress-200037541.html"
+        },
+        {
+          "title": "WORLD Radio: Monday morning news, November 9, 2026",
+          "url": "https://wng.org/podcasts/monday-morning-news-november-9-2026-1794152053"
+        }
+      ]
     }
   ],
   "business": [
