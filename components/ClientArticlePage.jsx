@@ -179,10 +179,10 @@ export default function ClientArticlePage({
               </ol>
             </section>
             <nav className={styles.tags} aria-label="Article tags">
-              <span>Topics</span>
+              <span>Tag</span>
               {article.tags.map((tag) => (
                 <Link key={tag} href={`/search?q=${encodeURIComponent(tag)}`}>
-                  {tag}
+                  {tag.toLowerCase()}
                 </Link>
               ))}
             </nav>
