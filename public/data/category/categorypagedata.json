@@ -1386,6 +1386,82 @@
           }
         ]
       }
+    },
+    {
+      "id": 6,
+      "title": "Wall Street Rebounds From AI Rout as Oil Prices Slide",
+      "slug": "wall-street-rebounds-ai-rout-oil-prices-slide",
+      "category": "Business",
+      "categorySlug": "business",
+      "authorSlug": "michael-reed",
+      "image": "/images/articles/wall-street-rebounds-ai-rout-oil-prices-2026.webp",
+      "excerpt": "US stocks posted their best day since April as falling oil prices and a chip rebound erased most of last week's post-midterm AI selloff, but Nvidia fell.",
+      "summary": "US stocks posted their best day since April as falling oil prices and a chip rebound erased most of last week's post-midterm AI selloff, but Nvidia fell.",
+      "publishedAt": "2026-11-10T09:00:00.000Z",
+      "timeAgo": "2h ago",
+      "readingTime": 5,
+      "wordCount": 760,
+      "keyTakeaways": [
+        "The S&P 500 jumped 2.3% on Monday, its best day since April 8, as a drop in oil prices and a chip-stock rebound recovered most of last week's losses.",
+        "Brent crude fell 5.8% to $92.57 a barrel after President Trump said renewed strikes on Iran were highly unlikely if talks make progress.",
+        "Nvidia fell 4.3% after its board opened an investigation into CEO Jensen Huang, even as AMD, CoreWeave and power stocks tied to AI data centers rallied."
+      ],
+      "quote": {
+        "text": "It's not like the coast is clear.",
+        "author": "Jay Hatfield, CEO, Infrastructure Capital Advisors"
+      },
+      "body": {
+        "sections": [
+          {
+            "id": "what-happened",
+            "title": "What happened",
+            "paragraphs": [
+              "Wall Street staged its strongest rally in seven months on Monday, as a sharp slide in oil prices and a rebound in chip stocks wiped out most of the previous week's post-election losses. The S&P 500 climbed 2.3% to 7,549.94, its best day since April 8, and now sits about 3.4% below the record it set last month. The Dow Jones Industrial Average gained 1,104 points, or 2.2%, to 52,389.75, while the Nasdaq composite rose 2.7% to 25,253.14. Wall Street's fear gauge, the VIX, dropped about 22% to roughly 19.9.",
+              "The bounce followed a punishing stretch. Stocks sank last week, handing the S&P 500 its biggest weekly drop since April 2025, after Democratic victories in the midterm elections raised fears that new rules could slow the buildout of AI data centers. The Philadelphia Semiconductor Index fell more than 12% over the week, then jumped more than 6% on Monday."
+            ]
+          },
+          {
+            "id": "what-drove-the-rebound",
+            "title": "What drove the rebound",
+            "paragraphs": [
+              "Oil did much of the heavy lifting. Brent crude fell 5.8% to $92.57 a barrel, extending a slide from more than $112 at the start of November. President Donald Trump told CNN over the weekend that renewed strikes on Iran were “highly unlikely” if negotiations show progress, although Secretary of State Marco Rubio said some of Tehran's demands for ending the war were unreasonable.",
+              "Cheaper crude eased inflation worries at a delicate moment. The 10-year Treasury yield held near 4.87%, well below the two-decade high above 5.30% it reached last month but still high enough to keep borrowing costs in focus. Reuters reported that fears of a December Federal Reserve rate hike lingered after stronger-than-expected October jobs data."
+            ]
+          },
+          {
+            "id": "evidence-and-context",
+            "title": "Evidence and context",
+            "paragraphs": [
+              "The gains were broad. Every one of the 11 major S&P 500 sectors finished higher, nine of them by more than 1%, with industrials and consumer discretionary leading at over 3%. AI-linked names bounced hard: Advanced Micro Devices jumped 13.3%, erasing last week's 11% loss, and CoreWeave rose 5.6% after tumbling 15.4%. Constellation Energy surged 10.5% after beating profit and revenue forecasts, helped by recent deals to power data centers for big tech companies.",
+              "Abroad, Japan's Nikkei 225 rose 2.3% and France's CAC 40 added 1.2%, while South Korea's Kospi slipped 0.8%."
+            ]
+          },
+          {
+            "id": "people-and-companies-affected",
+            "title": "The people and companies affected",
+            "paragraphs": [
+              "Nvidia, the face of the AI boom, went the other way, falling 4.3%. The chipmaker said its board is investigating CEO Jensen Huang after he acknowledged an intimate relationship with a business executive who, according to The New York Times, U.S. intelligence determined was gathering information for China. Nvidia's board said it has no reason to believe national security or company secrets were compromised, and that the review will examine all available information. China's foreign ministry rejected the allegations as smears.",
+              "Data center developers and power producers are also weighing how far Democratic-led statehouses and Congress will go. Voters have blamed the facilities for rising electricity bills, and Texas Governor-elect Gina Hinojosa has pledged an immediate moratorium on new data center construction when she takes office next year. Goldman Sachs has estimated that roughly a quarter of planned U.S. data center capacity sits in Texas. Trump, for his part, has urged states to welcome the industry, saying it brings riches."
+            ]
+          },
+          {
+            "id": "open-questions",
+            "title": "The open questions",
+            "paragraphs": [
+              "Analysts are split on how much of last week's damage was justified. Morgan Stanley and UBS called the rout overdone and said extreme regulation of data centers is unlikely. UBS's Ulrike Hoffmann-Burchardi described it as a reset rather than the start of a structural downturn in AI investment, while cautioning that crowded positioning and lofty expectations remain risks.",
+              "Jay Hatfield of Infrastructure Capital Advisors agreed the selloff went too far but said a policy overhang from Democrats remains, especially looking toward 2028. He expects data centers to get built but sees the S&P 500 stuck in a range through year-end."
+            ]
+          },
+          {
+            "id": "what-comes-next",
+            "title": "What comes next",
+            "paragraphs": [
+              "This week's data could set the next move. The Labor Department releases October consumer prices on Tuesday and producer prices on Friday, and investors will also track the Nvidia inquiry and any developments in the Iran talks. A hotter-than-expected inflation reading would sharpen rate-hike fears, while another drop in oil could extend the rally.",
+              "For now, the market is treating last week's selloff as a scare rather than a turning point. With yields elevated and policy risks unresolved, though, the recovery is far from guaranteed."
+            ]
+          }
+        ]
+      }
     }
   ],
   "finance": [
