@@ -6,6 +6,7 @@ import { articleHref, formatDate } from "@/lib/content";
 import { site } from "@/lib/site";
 import ShareTools from "./ShareTools";
 import { StoryCard } from "./StoryCard";
+import NytAlinaCard from "./NytAlinaCard";
 import styles from "./ClientArticlePage.module.css";
 
 function ArticlePhoto({ photo, portrait = false }) {
@@ -237,6 +238,7 @@ export default function ClientArticlePage({
                 Timeline sources [1–2]
               </a>
             </section>
+            <NytAlinaCard />
             <nav className={styles.panel} aria-labelledby="contents-heading">
               <h2 id="contents-heading">Table of contents</h2>
               <ol className={styles.contents}>

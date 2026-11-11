@@ -6,6 +6,7 @@ import { articleHref, categoryHref, formatDate } from "@/lib/content";
 import { site } from "@/lib/site";
 import ShareTools from "./ShareTools";
 import { StoryCard } from "./StoryCard";
+import NytFamilyCard from "./NytFamilyCard";
 import styles from "./ClientArticlePageTwo.module.css";
 
 export default function ClientArticlePageTwo({
@@ -100,6 +101,7 @@ export default function ClientArticlePageTwo({
               ) : null}
             </ol>
           </nav>
+          <NytFamilyCard />
           {article.timeline && article.timeline.length > 0 ? (
             <section className={styles.timeline} aria-labelledby="timeline-heading">
               <h2 id="timeline-heading">Timeline</h2>
