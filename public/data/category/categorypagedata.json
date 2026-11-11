@@ -2437,6 +2437,12 @@
       ],
       "sources": [
         {
+          "name": "Alina Habba Is Fired After $50 Million Deal and Trump Pardon Controversy",
+          "url": "https://www.nytimes.com/2026/11/10/us/politics/alina-habba-fired-pardon.html",
+          "note": "Coverage of the reported $50 million agreement, Alina Habba's dismissal, the timeline of events and the controversy surrounding the reported pardon efforts.",
+          "publisher": "The New York Times"
+        },
+        {
           "name": "Donald Trump speaks to reporters at a Mar-a-Lago Halloween party",
           "url": "https://rollcall.com/factbase/trump/transcript/donald-trump-press-gaggle-mar-a-lago-halloween-party-october-31-2026/",
           "note": "October 31, 2026 \u00b7 Press-gaggle transcript \u00b7 Remarks at 00:06:21\u201300:06:45",
@@ -2678,7 +2684,14 @@
           "text": "Trump publicly criticized the reported compensation agreement at Mar-a-Lago."
         }
       ],
-      "sources": [],
+      "sources": [
+        {
+          "publisher": "The New York Times",
+          "title": "Alina Habba Is Fired After $50 Million Deal and Trump Pardon Controversy",
+          "url": "https://www.nytimes.com/2026/11/10/us/politics/alina-habba-fired-pardon.html",
+          "description": "Coverage of the reported $50 million agreement, Alina Habba's dismissal, the timeline of events and the controversy surrounding the reported pardon efforts."
+        }
+      ],
       "body": {
         "sections": [
           {

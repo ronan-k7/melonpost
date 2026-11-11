@@ -1,7 +1,7 @@
 import { Fragment } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { CalendarDays, Clock3 } from "lucide-react";
+import { ArrowUpRight, CalendarDays, Clock3 } from "lucide-react";
 import { articleHref, categoryHref, formatDate } from "@/lib/content";
 import { site } from "@/lib/site";
 import ShareTools from "./ShareTools";
@@ -17,6 +17,9 @@ export default function ClientArticlePageTwo({
 }) {
   const sections = article.body.sections;
   const hero = article.photos.hero;
+  const sources = Array.isArray(article.sources)
+    ? article.sources.filter((source) => source && source.url && source.title)
+    : [];
   const url = `${site.url}${articleHref(article)}`;
   return (
     <article className={styles.article}>
@@ -90,6 +93,11 @@ export default function ClientArticlePageTwo({
                   <a href={`#${section.id}`}>{section.title}</a>
                 </li>
               ))}
+              {sources.length > 0 ? (
+                <li>
+                  <a href="#sources">Sources</a>
+                </li>
+              ) : null}
             </ol>
           </nav>
           {article.timeline && article.timeline.length > 0 ? (
@@ -160,6 +168,46 @@ export default function ClientArticlePageTwo({
                 </section>
               ))}
             </div>
+
+            {sources.length > 0 ? (
+              <section
+                id="sources"
+                className={styles.sources}
+                aria-labelledby="sources-heading"
+              >
+                <h2 id="sources-heading">Sources</h2>
+                <ol className={styles.sourceList}>
+                  {sources.map((source, si) => (
+                    <li className={styles.sourceItem} key={source.url}>
+                      <span className={styles.sourceNumber} aria-hidden="true">
+                        {String(si + 1).padStart(2, "0")}
+                      </span>
+                      <div className={styles.sourceContent}>
+                        {source.publisher ? (
+                          <span className={styles.sourcePublisher}>
+                            {source.publisher}
+                          </span>
+                        ) : null}
+                        <a
+                          className={styles.sourceLink}
+                          href={source.url}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          <span>{source.title}</span>
+                          <ArrowUpRight size={16} aria-hidden="true" />
+                        </a>
+                        {source.description ? (
+                          <p className={styles.sourceDescription}>
+                            {source.description}
+                          </p>
+                        ) : null}
+                      </div>
+                    </li>
+                  ))}
+                </ol>
+              </section>
+            ) : null}
 
             <nav className={styles.tags} aria-label="Article tags">
               <span>Tag</span>
