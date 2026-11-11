@@ -1849,6 +1849,85 @@
           }
         ]
       }
+    },
+    {
+      "id": 6,
+      "title": "Hotter Inflation Pushes Fed Toward a December Rate Hike",
+      "slug": "hotter-inflation-pushes-fed-toward-december-rate-hike",
+      "category": "Finance",
+      "categorySlug": "finance",
+      "authorSlug": "olivia-brooks",
+      "image": "/images/articles/hotter-inflation-pushes-fed-toward-december-rate-hike.webp",
+      "excerpt": "Consumer prices rose 0.4% in October and core inflation held at 0.3% for a third month, leaving the Federal Reserve all but set to raise rates in December.",
+      "summary": "Consumer prices rose 0.4% in October and core inflation held at 0.3% for a third month, leaving the Federal Reserve all but set to raise rates in December.",
+      "publishedAt": "2026-11-11T13:00:00.000Z",
+      "timeAgo": "1h ago",
+      "readingTime": 4,
+      "wordCount": 790,
+      "keyTakeaways": [
+        "Consumer prices rose 0.4% in October, above forecasts, while core inflation climbed 0.3% for the third straight month.",
+        "The Fed is widely expected to raise rates at its Dec. 8–9 meeting, and Governor Christopher Waller said a half-point move should be considered.",
+        "The BLS did not publish an annual inflation rate for October because last year’s government shutdown disrupted data collection."
+      ],
+      "quote": {
+        "text": "We’ve got to come to terms with this cost-side and inflation-side failure.",
+        "author": "Austan Goolsbee, president of the Federal Reserve Bank of Chicago"
+      },
+      "body": {
+        "sections": [
+          {
+            "id": "what-happened",
+            "title": "What happened",
+            "paragraphs": [
+              "Consumer prices rose 0.4% in October, the Bureau of Labor Statistics reported Tuesday, topping what economists had forecast and leaving the Federal Reserve on course to raise interest rates next month. Core inflation, which leaves out food and energy, climbed 0.3% against expectations for 0.2%, the third month in a row at that pace.",
+              "The reading followed a 0.6% jump in September. Stocks gave back part of Monday’s rally, with the S&P 500 slipping 0.4% to 7,520.93 and the Nasdaq Composite dropping 0.7%, while the 10-year Treasury yield rose to roughly 4.98%.",
+              "Monday had been a strong session. The S&P 500 climbed 2.4%, its best day since April, as falling oil prices and a tech rebound lifted sentiment. Tuesday’s report took some of the air out of that move."
+            ]
+          },
+          {
+            "id": "why-it-matters",
+            "title": "Why it matters",
+            "paragraphs": [
+              "The Federal Reserve’s next decision is due Wednesday, Dec. 9. A hotter-than-expected October report makes a rate increase at that meeting look close to certain. Policymakers voted 10–2 in late October to hold the benchmark rate at 3.75% to 4%, with both dissenters wanting an immediate hike, and futures pricing on CME’s FedWatch already put the odds of a quarter-point increase above 80% before the data arrived. Economists said the report removed most remaining doubt.",
+              "Fed Governor Christopher Waller sharpened the debate hours before the release. Speaking in London, he said he would support a December increase and that a half-point move should be on the table if core inflation came in around 0.3%. He argued a bigger step could help protect the central bank’s credibility. After the report, traders raised the odds of a half-point hike from near zero to about 14%, according to CME Group’s FedWatch tool."
+            ]
+          },
+          {
+            "id": "evidence-and-context",
+            "title": "Evidence and context",
+            "paragraphs": [
+              "Details beneath the headline were uncomfortable for policymakers. Beef prices rose 0.9% and snacks jumped 1%, while medical care commodities, a category that includes drugs, rose 0.5% for the first time since December 2025. Services excluding housing and energy, the so-called super core gauge, climbed 0.4%.",
+              "Core prices have now risen 0.3% for three months straight and by 0.3% or more in five of the first ten months of 2026. Over the past three months, they are rising at a 3.7% annual pace, well above the Fed’s 2% target.",
+              "The BLS did not publish a 12-month inflation rate for October because last year’s government shutdown kept it from collecting the prices it would need for the comparison. Kiplinger Letter economist David Payne expects annual inflation to finish the year near 4%, with energy costs staying high while the situation in the Middle East remains unresolved."
+            ]
+          },
+          {
+            "id": "people-and-places",
+            "title": "The people and places affected",
+            "paragraphs": [
+              "Households are likely to feel the next move in borrowing costs. A higher benchmark rate generally feeds into credit card rates and other variable-rate debt, while savers can expect somewhat better returns on cash accounts. Longer-term rates have already moved, with the 10-year Treasury yield pressing toward 5%.",
+              "Despite Tuesday’s dip, the S&P 500 is still up almost 10% for the year, though it sits below its yearly high of 7,818.93 and has slipped about 3.7% over the past month. Nvidia fell more than 4% as an investigation tied to its chief executive stayed in focus, while AMD jumped about 13%. Gold held near $4,030 an ounce and U.S. crude traded around $86 a barrel.",
+              "Strategists cited by Kiplinger described a December increase as all but settled. They pointed out that a steady labor market, with 165,000 jobs added in October, gives the Fed room to focus on inflation that has run above its 2% target for more than five years."
+            ]
+          },
+          {
+            "id": "open-questions",
+            "title": "The open questions",
+            "paragraphs": [
+              "The main uncertainty is size. Most forecasters expect a quarter-point increase on Dec. 9, but Waller’s comments keep a larger move in play if inflation proves stickier than he expects. Economists also see at least one more hike in 2027. Chicago Fed President Austan Goolsbee struck a similar tone on Monday, a day before the data landed.",
+              "KPMG analysts warned that the components that feed the Fed’s preferred gauge, the personal consumption expenditures index, point to an even hotter October reading when that report arrives. Some analysts also flagged jitters over AI-linked stocks as a risk that could complicate the picture."
+            ]
+          },
+          {
+            "id": "what-comes-next",
+            "title": "What comes next",
+            "paragraphs": [
+              "Attention now turns to the Fed’s Dec. 8–9 meeting. Policymakers will weigh the new inflation data against any further stock market turbulence, which some analysts say is the main thing that could talk the central bank out of a hike.",
+              "Because October’s CPI was the last inflation report before the meeting, officials will lean on other data and market conditions as they decide how aggressive to be. Persistent 0.3% core readings would strengthen the case for faster tightening in 2027, while softer readings could ease the pressure. For consumers, the message is that borrowing is likely to stay expensive well into next year."
+            ]
+          }
+        ]
+      }
     }
   ],
   "technology": [
