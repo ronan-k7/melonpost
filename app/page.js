@@ -88,33 +88,19 @@ export default function HomePage() {
     (a, b) => new Date(b.publishedAt) - new Date(a.publishedAt)
   );
 
-  const getArticleByCategoryAndId = (category, id) => {
-    return articles.find(
-      article => article.category === category && article.id === id
-    );
-  };
-
-  // ---- Lead ---------------------------------------------------------
-
-  // const lead = getArticleByCategoryAndId("us", 1);
-  // usedSlugs.add(lead.slug);
-  // const leadAuthor = getAuthor(lead.authorSlug);
-
-  const PINNED_CLIENT_SLUG = "trump-alina-habba-50-million-contract";
-  const lead = articles.find(article => article.slug === PINNED_CLIENT_SLUG) || byPublishedDesc[0];
+  const lead = articles.find(article => article.slug === "mark-rossini-pardon-puerto-rico-case") || byPublishedDesc[0];
   usedSlugs.add(lead.slug);
   const leadAuthor = getAuthor(lead.authorSlug);
 
-  // ---- Side-lead (top-right) — genuinely latest news, newest first ----
-  // The second client article is pinned as the first (top) side-lead card;
-  // the remaining three slots stay newest-first.
-  const PINNED_SIDE_SLUG = "alina-habba-mildon-herrera-velutini-family";
-  const pinnedSide = articles.find(article => article.slug === PINNED_SIDE_SLUG);
-  if (pinnedSide) usedSlugs.add(pinnedSide.slug);
-  const sideLead = [
-    ...(pinnedSide ? [pinnedSide] : []),
-    ...pickAny(byPublishedDesc, usedSlugs, pinnedSide ? 3 : 4),
+  const sideSlugs = [
+    "trump-alina-habba-50-million-contract",
+    "alina-habba-mildon-herrera-velutini-family",
   ];
+  const pinnedSide = sideSlugs
+    .map(slug => articles.find(article => article.slug === slug))
+    .filter(article => article && !usedSlugs.has(article.slug));
+  markUsed(usedSlugs, pinnedSide);
+  const sideLead = [...pinnedSide, ...pickAny(byPublishedDesc, usedSlugs, 4 - pinnedSide.length)];
   markUsed(usedSlugs, sideLead);
 
   // ---- Top stories: single category ----------------------------------

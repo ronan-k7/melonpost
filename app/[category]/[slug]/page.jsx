@@ -304,6 +304,7 @@ import { Byline, StoryCard } from "@/components/StoryCard";
 import ShareTools from "@/components/ShareTools";
 import NewsletterForm from "@/components/NewsletterForm";
 import ClientArticlePage from "@/components/ClientArticlePage";
+import CaseReport from "@/components/CaseReport";
 import ClientArticlePageTwo from "@/components/ClientArticlePageTwo";
 
 export function generateStaticParams() {
@@ -412,6 +413,18 @@ export default async function ArticlePage({ params }) {
 
   const newsArticleSchema = newsArticleJsonLd(article, author, wordCount);
   const breadcrumbJsonLd = articleBreadcrumbs(article);
+
+  if (article.template === "case-report") {
+    return (
+      <CaseReport
+        article={article}
+        author={author}
+        related={related}
+        schema={newsArticleSchema}
+        breadcrumbs={breadcrumbJsonLd}
+      />
+    );
+  }
 
   if (article.template === "client-long-read") {
     return (

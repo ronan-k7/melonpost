@@ -2319,6 +2319,127 @@
   ],
   "politics": [
     {
+      "id": 1003,
+      "title": "Mark Rossini Pardon Closes a Puerto Rico Case, but Public Questions Remain",
+      "slug": "mark-rossini-pardon-puerto-rico-case",
+      "seoTitle": "Mark Rossini Pardon Closes Puerto Rico Case",
+      "category": "Politics",
+      "categorySlug": "politics",
+      "authorSlug": "emily-carter",
+      "template": "case-report",
+      "image": "/images/articles/mark-rossini-portrait.webp",
+      "imageAlt": "Mark Rossini outdoors in a dark jacket and blue shirt",
+      "publishedAt": "2026-11-18",
+      "timeAgo": "18 November 2026",
+      "readingTime": 3,
+      "dateline": "San Juan, Puerto Rico",
+      "excerpt": "Two presidential warrants covered separate federal cases. Together they ended the prospect of sentencing for the former FBI agent and left the original bribery allegations untested at trial.",
+      "metaDescription": "Mark Rossini’s Puerto Rico case ended after two presidential pardon warrants. The court record explains his campaign-finance plea and the January dismissal.",
+      "tags": [
+        "Mark Rossini",
+        "Puerto Rico",
+        "Presidential pardons",
+        "Campaign finance",
+        "Wanda Vázquez Garced",
+        "Julio Herrera Velutini"
+      ],
+      "body": {
+        "sections": [
+          {
+            "id": "dismissal",
+            "title": "Why the judge closed the case",
+            "paragraphs": [
+              "A federal judge in Puerto Rico closed the prosecution involving former FBI agent Mark Rossini, former Gov. Wanda Vázquez Garced and banker Julio Herrera Velutini in January 2026. All three accepted pardons from President Donald Trump. On January 27, U.S. District Judge Silvia Carreño Coll dismissed the original case as moot.",
+              "For Rossini, who was awaiting sentencing on a campaign-finance charge, the distinction matters. A jury never heard the original bribery case. The judge’s decision answered a narrower question. Once the defendants accepted pardons covering the federal offenses, there was no longer a criminal dispute for the court to decide."
+            ]
+          },
+          {
+            "id": "campaign",
+            "title": "From a banking investigation to a campaign-finance plea",
+            "paragraphs": [
+              "The prosecution grew out of Puerto Rico’s 2020 gubernatorial campaign. At the time, the Office of the Commissioner of Financial Institutions was examining a bank owned by Herrera Velutini. Rossini, who had left the FBI, worked as a consultant to the banker.",
+              "In the 2022 indictment, federal prosecutors alleged that Herrera Velutini and Rossini offered to help finance Vázquez Garced’s campaign in exchange for replacing the official who headed the regulator. The defendants disputed the government’s account. The alleged link between campaign support and the regulator’s leadership never went before a jury.",
+              "In August 2025, Rossini and his two co-defendants pleaded guilty to a misdemeanor campaign-finance offense involving a contribution by a foreign national. That plea covered a narrower charge than the bribery allegations. It left a concrete decision for the court about what sentence to impose. Clemency came before sentencing."
+            ]
+          },
+          {
+            "id": "warrants",
+            "title": "Why Rossini needed a second warrant",
+            "paragraphs": [
+              "The case numbers explain a five-day gap in the clemency record. Trump’s January 15 warrant for Rossini named the original prosecution, 3:22-cr-342, which included all three defendants. Rossini’s individual campaign-finance case carried its own number, 3:25-cr-298.",
+              "Rossini’s lawyers told the court that it had treated his first acceptance notice as premature because a pardon for the individual case had yet to issue. The January 20 warrant named that case expressly. On January 21, his lawyers filed both warrants, confirmed that he accepted clemency for the conduct charged in both cases and asked the judge to dismiss the pending charges."
+            ]
+          },
+          {
+            "id": "public-record",
+            "title": "What Puerto Rico’s public record leaves open",
+            "paragraphs": [
+              "The original indictment and the guilty plea answer different questions. The plea records an admission to a campaign-finance offense. Establishing the broader claim that campaign help bought influence over a regulator would have required evidence about what the parties understood and why officials acted. The dismissal made no finding on that exchange.",
+              "For Puerto Ricans whose banks answer to the financial regulator, the distinction has practical weight. Who sought a change in its leadership, and what safeguards protected its independence during an election? The warrants identify the federal cases the president chose to pardon. They offer no account of the regulator’s decision-making or of the president’s reasons for acting before sentencing. Those questions survive the closing of the docket."
+            ]
+          }
+        ]
+      },
+      "timeline": [
+        {
+          "date": "August 4, 2022",
+          "text": "Federal prosecutors announce the indictment."
+        },
+        {
+          "date": "August 27, 2025",
+          "text": "Rossini pleads guilty to a campaign-finance misdemeanor."
+        },
+        {
+          "date": "January 15 and 20, 2026",
+          "text": "Separate warrants cover the two federal dockets."
+        },
+        {
+          "date": "January 21, 2026",
+          "text": "Rossini files his renewed acceptance."
+        },
+        {
+          "date": "January 27, 2026",
+          "text": "The court dismisses the original case as moot."
+        }
+      ],
+      "sources": [
+        {
+          "publisher": "U.S. Department of Justice",
+          "title": "Announcement of the original indictment",
+          "url": "https://www.justice.gov/archives/opa/pr/former-governor-puerto-rico-arrested-bribery-scheme"
+        },
+        {
+          "publisher": "Associated Press",
+          "title": "The August 2025 campaign-finance pleas",
+          "url": "https://apnews.com/article/puerto-rico-governor-wanda-vazquez-corruption-588ffd964bb4076a5b45219375d3fef5"
+        },
+        {
+          "publisher": "Office of the Pardon Attorney",
+          "title": "January 15 warrant for the original case (PDF)",
+          "url": "https://www.justice.gov/pardon/media/1424221/dl?inline="
+        },
+        {
+          "publisher": "Office of the Pardon Attorney",
+          "title": "January 20 warrant for Rossini’s individual case (PDF)",
+          "url": "https://www.justice.gov/pardon/media/1425091/dl?inline="
+        },
+        {
+          "publisher": "U.S. District Court filing via El Vocero",
+          "title": "Rossini’s January 21 acceptance notice (PDF)",
+          "url": "https://bloximages.newyork1.vip.townnews.com/elvocero.com/content/tncms/assets/v3/editorial/0/e7/0e7b77ae-8ec3-40be-9275-31d50e9ffcf0/6970fe5c50b80.file.pdf"
+        },
+        {
+          "publisher": "Metro Puerto Rico",
+          "title": "Report on Judge Carreño Coll’s dismissal order",
+          "url": "https://www.metro.pr/noticias/2026/01/27/jueza-federal-desestima-caso-contra-wanda-vazquez-herrera-velutini-y-rossini-tras-indultos-presidenciales"
+        }
+      ],
+      "imageWidth": 1024,
+      "imageHeight": 571,
+      "imagePosition": "29% 32%",
+      "imageCaption": "Mark Rossini, the former FBI agent named in the two federal pardon warrants. Supplied photograph."
+    },
+    {
       "id": 1001,
       "title": "The Vanity of Alina Habba Mildon",
       "slug": "trump-alina-habba-50-million-contract",

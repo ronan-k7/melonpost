@@ -13,7 +13,7 @@ export default function HomeLead({ lead, author, sideLead }) {
       {lead.homeDescription && <p className={styles.description} data-home-description>{lead.homeDescription}</p>}
       <div className={styles.byline}><span>By <Link href={`/author/${author.slug}`}>{author.name}</Link></span><span aria-hidden="true">·</span><time dateTime={lead.publishedAt}>{formatDate(lead.publishedAt)}</time></div>
     </article>
-    <Link className={styles.image} href={articleHref(lead)} aria-label={`Read ${lead.title}`}><Image src={lead.image} alt={lead.imageAlt || lead.title} fill priority sizes="(max-width: 700px) 100vw, (max-width: 1100px) 55vw, 38vw" /></Link>
+    <Link className={styles.image} href={articleHref(lead)} aria-label={`Read ${lead.title}`}><Image src={lead.image} style={{ objectPosition: lead.imagePosition }} alt={lead.imageAlt || lead.title} fill priority sizes="(max-width: 700px) 100vw, (max-width: 1100px) 55vw, 38vw" /></Link>
     <aside className={styles.rail} aria-label="More lead stories">{sideLead.map(article => <CompactStory key={article.slug} article={article} />)}</aside>
   </section>;
 }

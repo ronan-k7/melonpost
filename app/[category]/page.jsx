@@ -71,7 +71,7 @@ export default async function CategoryPage({ params }) {
       <div className="mx-auto w-[min(calc(100%-48px),1390px)] pb-[90px] pt-[42px] max-[980px]:w-[min(calc(100%-32px),1390px)] max-[700px]:w-[min(calc(100%-24px),1390px)]">
         <section className="grid min-h-[470px] grid-cols-[1.35fr_.8fr] border-b border-line max-[980px]:grid-cols-1">
           <Link className="relative min-h-[440px] overflow-hidden max-[700px]:min-h-[320px]" href={articleHref(lead)}>
-            <Image src={lead.image} alt={lead.imageAlt || lead.title} fill priority sizes="(max-width: 850px) 100vw, 58vw" />
+            <Image src={lead.image} style={{ objectPosition: lead.imagePosition }} alt={lead.imageAlt || lead.title} fill priority sizes="(max-width: 850px) 100vw, 58vw" />
           </Link>
           <div className="flex flex-col items-start justify-center px-[30px] py-[38px] pl-[45px] max-[980px]:pl-[15px] max-[700px]:px-1 max-[700px]:py-7">
             <span className="inline-flex items-center gap-1 font-sans text-[10px] font-bold uppercase leading-[1.2] tracking-[.09em] text-red">Today&apos;s lead</span>
