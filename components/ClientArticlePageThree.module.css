@@ -271,7 +271,7 @@
   font: 800 22px/1.3 var(--display);
   letter-spacing: -0.015em;
   margin: 0 0 22px;
-  color: #fff;
+  color: #4a1d1d;
 }
 .route ol {
   list-style: none;
@@ -315,13 +315,13 @@
   color: var(--gold);
 }
 .route h3 {
-  font: 700 18px/1.35 var(--display);
+  font: 700 14px/1.35 var(--display);
   margin: 2px 0 4px;
-  color: #fff;
+  color: #0e0d0d;
 }
 .route li p {
   font: 400 15px/1.6 var(--display);
-  color: #c9d4e0;
+  color: #213141;
   margin: 0;
   max-width: 58ch;
 }
@@ -924,4 +924,133 @@
   .cutHeader { width: min(calc(100% - 32px), 1180px); }
   .cutFrame { border-left-width: 6px; }
   .cutTitle { font-size: clamp(30px, 9vw, 40px); }
+}
+
+
+/* ---------- Alina Habba feature: mobile + responsive pass ----------
+   Scoped to .habbaFeature only, so no other article is affected.
+   Why this block exists: the feature's own desktop rules
+   (.habbaFeature .layout, 2 classes) out-rank the base mobile rules
+   (.layout, 1 class), so the 205px + 760px grid never collapsed on phones.
+   Everything below uses the same prefix and sits last so it wins. */
+
+.habbaFeature {
+  overflow-x: clip;                 /* no sideways scroll on any device */
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+.habbaFeature .story,
+.habbaFeature .story p,
+.habbaFeature .story li,
+.habbaFeature .story h2,
+.habbaFeature .story h3,
+.habbaFeature .story blockquote {
+  overflow-wrap: anywhere;          /* long names / URLs never push the page wider */
+}
+.habbaFeature .cutText,
+.habbaFeature .cutPhoto { min-width: 0; }
+.habbaFeature .cutTitle,
+.habbaFeature .cutByline { overflow-wrap: anywhere; }
+.habbaFeature .cutMat img { object-position: 50% 25%; }
+.habbaFeature .share > div { flex-wrap: wrap; }
+
+/* ---- Tablet and below (<= 1000px): single reading column ---- */
+@media (max-width: 1000px) {
+  .habbaFeature .layout {
+    grid-template-columns: minmax(0, 1fr);
+    width: min(calc(100% - 40px), 760px);
+    gap: 22px;
+    padding-top: 26px;
+  }
+  .habbaFeature .rail { position: static; }
+  .habbaFeature .contents h2 { display: none; }
+  /* section list becomes a swipeable chip bar */
+  .habbaFeature .contents ol {
+    display: flex;
+    gap: 8px;
+    border-left: 0;
+    overflow-x: auto;
+    padding-bottom: 10px;
+    overscroll-behavior-x: contain;
+    scroll-snap-type: x proximity;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: thin;
+  }
+  .habbaFeature .contents li { flex: 0 0 auto; scroll-snap-align: start; }
+  .habbaFeature .contents a {
+    display: inline-flex;
+    align-items: center;
+    min-height: 40px;               /* comfortable tap target */
+    margin: 0;
+    padding: 8px 14px;
+    border: 1px solid var(--rule);
+    border-radius: 999px;
+    background: #fff;
+    white-space: nowrap;
+    max-width: 78vw;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .habbaFeature .railShare { display: none; }
+  .habbaFeature .related { width: min(calc(100% - 40px), 900px); }
+  .habbaFeature .related > div { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
+/* ---- Header stacks earlier on narrow tablets ---- */
+@media (max-width: 900px) {
+  .habbaFeature .cutTitle { font-size: clamp(30px, 6vw, 46px); }
+  .habbaFeature .cutPhoto { padding: 16px; }
+  .habbaFeature .cutMat { max-width: 640px; margin: 0 auto; }
+}
+
+/* ---- Phones (<= 640px) ---- */
+@media (max-width: 640px) {
+  .habbaFeature .layout,
+  .habbaFeature .related { width: min(calc(100% - 32px), 760px); }
+  .habbaFeature .cutHeader { padding-top: 16px; }
+  .habbaFeature .cutText { padding: 24px 18px 22px; }
+  .habbaFeature .cutKicker { flex-wrap: wrap; gap: 4px 9px; margin-bottom: 14px; }
+  .habbaFeature .cutTitle { font-size: clamp(28px, 8.6vw, 38px); line-height: 1.08; margin-bottom: 16px; }
+  .habbaFeature .cutPhoto { padding: 12px; }
+  .habbaFeature .cutMat { padding: 8px; }
+  .habbaFeature .cutCaption { padding: 0 2px; }
+
+  .habbaFeature .takeaways { padding: 20px 16px; }
+  .habbaFeature .takeaways h2 { font-size: 26px; }
+  .habbaFeature .lead p { font-size: 18px; line-height: 1.7; }
+  .habbaFeature .lead p:first-child { font-size: 19px; }
+  .habbaFeature .section p { font-size: 17.5px; line-height: 1.75; }
+  .habbaFeature .section h2 { font-size: clamp(26px, 7.6vw, 32px); margin-top: 34px; }
+  .habbaFeature .pullQuote { padding: 18px 16px; margin-left: 0; margin-right: 0; }
+  .habbaFeature .pullQuote p { font-size: 23px; line-height: 1.3; }
+  .habbaFeature .route { padding: 22px 16px 4px; }
+  .habbaFeature .route ol { padding-left: 24px; }
+  .habbaFeature .route li::after { left: -24px; }
+  .habbaFeature .route li::before { left: -31px; }
+  .habbaFeature .balance { padding: 20px 16px 16px; }
+  .habbaFeature .balanceGrid { grid-template-columns: minmax(0, 1fr); gap: 16px; }
+  .habbaFeature .tags { gap: 8px; }
+  .habbaFeature .tags a { display: inline-flex; align-items: center; min-height: 38px; padding: 6px 14px; }
+  .habbaFeature .authorBox { grid-template-columns: 56px minmax(0, 1fr); gap: 14px; padding: 18px 16px; }
+  .habbaFeature .authorBox img { width: 56px; height: 56px; }
+  .habbaFeature .related { margin-top: 44px; padding-top: 30px; }
+  .habbaFeature .related h2 { font-size: 30px; }
+  .habbaFeature .related > div { grid-template-columns: minmax(0, 1fr); gap: 20px; }
+}
+
+/* ---- Very small phones (<= 380px) ---- */
+@media (max-width: 380px) {
+  .habbaFeature .layout,
+  .habbaFeature .related,
+  .habbaFeature .cutHeader { width: calc(100% - 24px); }
+  .habbaFeature .cutFrame { border-left-width: 5px; }
+  .habbaFeature .cutText { padding: 20px 14px; }
+  .habbaFeature .section p { font-size: 17px; }
+  .habbaFeature .pullQuote p { font-size: 21px; }
+}
+
+/* ---- Landscape phones: keep the header compact ---- */
+@media (max-height: 480px) and (orientation: landscape) {
+  .habbaFeature .cutFrame { min-height: 0; }
+  .habbaFeature .cutText { padding: 22px 24px; }
 }
