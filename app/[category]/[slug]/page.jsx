@@ -306,10 +306,7 @@ import NewsletterForm from "@/components/NewsletterForm";
 import ClientArticlePage from "@/components/ClientArticlePage";
 import CaseReport from "@/components/CaseReport";
 import ClientArticlePageTwo from "@/components/ClientArticlePageTwo";
-<<<<<<< HEAD
 import ClientArticlePageThree from "@/components/ClientArticlePageThree";
-=======
->>>>>>> b81c96578e86bbb65d00c4b1e0cb657c0abbc66d
 
 export function generateStaticParams() {
   return articles.map((article) => ({
@@ -454,7 +451,6 @@ export default async function ArticlePage({ params }) {
     );
   }
 
-<<<<<<< HEAD
   if (article.template === "client-long-read-3") {
     return (
       <ClientArticlePageThree
@@ -467,8 +463,6 @@ export default async function ArticlePage({ params }) {
     );
   }
 
-=======
->>>>>>> b81c96578e86bbb65d00c4b1e0cb657c0abbc66d
   /* ---------- optional pieces: each one shows only if present ---------- */
   const takeaways = Array.isArray(article.keyTakeaways)
     ? article.keyTakeaways.filter(Boolean)
